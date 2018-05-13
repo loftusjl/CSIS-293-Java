@@ -1,32 +1,16 @@
 package project2;
 
-public class CommissionEmployee extends Object{
-    private String firstName;
-    private String lastName;
-    private String socialSecurityNumber;
+public class CompensationModel extends Employee{
+	private boolean basePlusComp;
     private double grossSales;
     private double commissionRate;
-
-    // constructor
-    public CommissionEmployee(String first, String last, String ssn,
-                              double sales, double rate){
-        // implicit call to Object constructor occurs here
-        setFirstName(first);
-        setLastName(last);
-        setSocialSecurityNumber(ssn);
-        setGrossSales(sales);
-        setCommissionRate(rate);
-    }
-    // SETTERS
-    public void setFirstName(String firstName){
-        this.firstName = firstName;
-    }
-    public void setLastName(String lastName){
-        this.lastName = lastName;
-    }
-    public void setSocialSecurityNumber(String socialSecurityNumber){
-        this.socialSecurityNumber = socialSecurityNumber;
-    }
+	
+	public CompensationModel(String first, String last, String ssn, boolean model) {
+		// call to superclass Employee constructor
+		super(first, last, ssn);
+		this.basePlusComp = false; // give logic to set true or false. 
+		}
+	// setters
     public void setGrossSales(double grossSales){
         if(grossSales >= 0.0f)
             this.grossSales = grossSales;
@@ -41,28 +25,23 @@ public class CommissionEmployee extends Object{
             throw new IllegalArgumentException(
                     "Commission rate must be > 0.0f and < 1.0f");
     }
-    // GETTERS
-    public String getFirstName(){
-        return this.firstName;
-    }
-    public String getLastName(){
-        return this.lastName;
-    }
-    public String getSocialSecurityNumber(){
-        return this.socialSecurityNumber;
-    }
+    
+    // getters
     public double getGrossSales(){
         return this.grossSales;
     }
     public double getCommissionRate(){
         return this.commissionRate;
     }
+    
     // calculate earnings
+    @Override
     public double earnings(){
         return getCommissionRate() * getGrossSales();
-    }
-    // return string representation of CommissionEmployee object
-    @Override // indicates this method overrides a superclass method
+	}
+    
+    // return string representation of CompensationModel object
+    @Override
         public String toString(){
             return String.format("%s: %s %s\n%s: %s\n%s: %.2f\n%s: %.2f",
                     "commission employee", getFirstName(), getLastName(),
@@ -70,4 +49,6 @@ public class CommissionEmployee extends Object{
                     "gross sales", getGrossSales(),
                     "commission rate", getCommissionRate());
         }
+
+
 }

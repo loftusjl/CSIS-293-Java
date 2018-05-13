@@ -1,4 +1,4 @@
-package project2;
+package chapter9;
 
 public class BasePlusCommissionEmployeeTest{
     public static void main(String[] args){

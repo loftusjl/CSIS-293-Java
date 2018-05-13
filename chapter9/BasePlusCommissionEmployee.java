@@ -1,4 +1,4 @@
-package project2;
+package chapter9;
 
 public class BasePlusCommissionEmployee extends CommissionEmployee{
     private double baseSalary;
