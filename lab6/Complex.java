@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package lab6;
 
 class Complex{
@@ -39,7 +38,6 @@ class Complex{
  
 }
  
-=======
 package lab6;
 
 class Complex{
@@ -79,5 +77,3 @@ class Complex{
 	}
  
 }
- 
->>>>>>> 6bb1f4c330632809cb8d2fd272330bf90bc46547

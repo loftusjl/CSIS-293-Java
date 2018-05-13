@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // File: Oak.java - the other tree in our hierarchy
 // Author: Mike Qualls
 
@@ -25,7 +24,6 @@ public class Oak extends Tree  {
 
 
 }  // end class Oak
-=======
 // File: Oak.java - the other tree in our hierarchy
 // Author: Mike Qualls
 
@@ -52,4 +50,3 @@ public class Oak extends Tree  {
 
 
 }  // end class Oak
->>>>>>> 6bb1f4c330632809cb8d2fd272330bf90bc46547
