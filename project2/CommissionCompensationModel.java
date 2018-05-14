@@ -2,9 +2,10 @@ package project2;
 
 public class CommissionCompensationModel extends CompensationModel{
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	public CommissionCompensationModel(double grossSales, double commissionRate) {
+		super(grossSales, commissionRate);
+		// TODO Auto-generated constructor stub
 	}
+
 
 }

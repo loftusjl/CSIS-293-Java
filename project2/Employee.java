@@ -4,13 +4,14 @@ public class Employee{
     private String firstName;
     private String lastName;
     private String socialSecurityNumber;
-    private double earnings;
+    private boolean basePlusComp;
     
-	public Employee(String first, String last, String ssn) {
+	public Employee(String first, String last, String ssn, boolean model) {
 		// implicit call to Object constructor occurs here
         setFirstName(first);
         setLastName(last);
         setSocialSecurityNumber(ssn);
+        setBasePlusComp(model);
     }
 
 	// SETTERS
@@ -19,6 +20,9 @@ public class Employee{
     }
     public void setLastName(String lastName){
         this.lastName = lastName;
+    }
+    public void setBasePlusComp(boolean basePlusComp){
+        this.basePlusComp = basePlusComp;
     }
     public void setSocialSecurityNumber(String socialSecurityNumber){
         this.socialSecurityNumber = socialSecurityNumber;
@@ -34,15 +38,16 @@ public class Employee{
     public String getSocialSecurityNumber(){
         return this.socialSecurityNumber;
     }
-    // calculate earnings
-    public double earnings(){
-		return earnings;
+    public boolean getBasePlusComp() {
+    	return this.basePlusComp;
     }
+
 
  // return string representation of CompensationModel object
 	public String toString(){
-		return String.format("%s: %s %s\n%s: %s\n%s: %.2f\n%s: %.2f",
+		return String.format("%s: %s %s\n%s: %s\n%s: %b",
 		"commission employee", getFirstName(), getLastName(),
-		"social security number", getSocialSecurityNumber());
+		"social security number", getSocialSecurityNumber(),
+		"employee is under Base Plus Commission Compensation model: ", getBasePlusComp());
 	}
 }
