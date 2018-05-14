@@ -12,16 +12,17 @@ public class Employee{
         setSocialSecurityNumber(ssn);  
     }
 	
-	public void earnings() {}
+	public void earnings() {
+	}
 
-	public void earnings(double grossSales, double commissionRate) {
+	public double earnings(double grossSales, double commissionRate) {
 		CompensationModel emp = new CommissionCompensationModel(grossSales, commissionRate);
-		System.out.printf("\n%s", emp);
+		return emp.earnings();
 		
 	}
-	public void earnings(double grossSales, double commissionRate, double salary) {
+	public double earnings(double grossSales, double commissionRate, double salary) {
 		CompensationModel emp = new BasePlusCommissionCompensationModel(grossSales, commissionRate, salary);
-		System.out.printf("\n%s", emp);
+		return emp.earnings();
 		
 	}
 	// SETTERS

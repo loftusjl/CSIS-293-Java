@@ -1,16 +1,12 @@
 package project2;
 
-public class CompensationModel{
-    private double earnings;
-
+public abstract class CompensationModel{
 
     public CompensationModel() {}
 
     // calculate earnings
-    public double earnings(){
-		return earnings;
-    }
-
+    public abstract double earnings();
+    
     // return String representation of object
     public String toString(){
         return null;
